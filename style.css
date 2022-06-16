@@ -1,0 +1,78 @@
+body {
+    background: url(https://picsum.photos/id/1081/1920/1080);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    height: 500px;
+    width: 800px;
+    background-color: #242424;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#result-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#input-text {
+    background: #323232;
+    border-radius: 15px;
+    width: 150px;
+    height: 60px;
+    border: none;
+    appearance: textfield;
+    font-size: 20px;
+    color: white;
+}
+
+#btn-send {
+    border: none;
+    background: #323232;
+    width: 150px;
+    height: 100px;
+    border-radius: 25px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#btn-send:hover {
+    background: #505050;
+    transition: 0.2s;
+}
+
+
+
+select {
+    border: none;
+    background: #323232;
+    width: 150px;
+    height: 60px;
+    border-radius: 25px;
+    transition: 0.2s;
+    color: white;
+    font-size: 20px;
+}
+
+select:hover {
+    background: #505050;
+    transition: 0.2s;
+}
