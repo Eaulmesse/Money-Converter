@@ -26,6 +26,8 @@ amount.addEventListener("change", ()=> {
 console.log(btnSend)
 
 
+// RECUPERER L'API
+
 btnSend.addEventListener("click", ()=> {
     console.log(url);
     
@@ -53,6 +55,9 @@ btnSend.addEventListener("click", ()=> {
     .catch(error => console.log(error));
 
 })
+
+
+// LISTE DES MONNAIES
 
 
 var symbolHeaders = new Headers();
@@ -83,12 +88,7 @@ fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
         option.textContent = element; 
     }
 
-    
-
-
-
-
-  })
+})
   .catch(error => console.log('error', error));
 
 
