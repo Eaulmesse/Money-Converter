@@ -5,7 +5,6 @@ const to = document.getElementById("to");
 const amount = document.getElementById("input-text");
 const resultText = document.getElementById("result-text");
 
-// console.log(amount);
 
 url = `https://api.apilayer.com/exchangerates_data/convert?to=AUD&from=AUD&amount=1`;
 
@@ -54,6 +53,43 @@ btnSend.addEventListener("click", ()=> {
     .catch(error => console.log(error));
 
 })
+
+
+var symbolHeaders = new Headers();
+symbolHeaders.append("apikey", "bCECUXUm0CtUaLzRFX1GHGHrgrcKHO61");
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: symbolHeaders
+};
+
+fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
+  .then(symbol => symbol.json())
+  .then(symbol =>  {
+    
+    let symbols = symbol.symbols;
+    console.log(symbols);
+    for(let element in symbols)  {
+        let option = document.createElement('option')
+        from.appendChild(option)
+        option.value = element;
+        option.textContent = element; 
+    }
+    for(let element in symbols)  {
+        let option = document.createElement('option')
+        to.appendChild(option)
+        option.value = element;
+        option.textContent = element; 
+    }
+
+    
+
+
+
+
+  })
+  .catch(error => console.log('error', error));
 
 
 
